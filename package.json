@@ -1,17 +1,22 @@
 {
   "name": "myKit",
   "version": "1.0.0",
-  "description": "Frontend Gulp Setup",
+  "description": "BEM and Webpack Frontend Framework",
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "sass",
     "development",
     "javascript",
-    "responsive"
+    "responsive",
+    "bem",
+    "webpack",
+    "es6",
+    "scss"
   ],
   "author": "Tom Cafferkey",
   "license": "ISC",
