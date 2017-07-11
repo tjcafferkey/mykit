@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
      entry: './myKit/scripts/script.js',
@@ -12,5 +13,10 @@ module.exports = {
              exclude: /node_modules/,
              loader: 'babel-loader?presets[]=es2015'
          }]
-     }
+     },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            compress: { warnings: false }
+        })
+    ]
  };
