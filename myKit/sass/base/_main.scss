@@ -1,0 +1,37 @@
+/* =============================================================================
+    Main
+    ========================================================================= */
+
+/* Don't declare font-size here, 16px is the browser default unless the user has
+   increased this for accessiblity purposes. Use EM's or REM's ============== */
+html {
+    color: $basefontcolour;
+    font-family: $basefont;
+    font-weight: $regular;
+    line-height: $baseline;
+}
+
+/* Single-direction margin declarations - http://goo.gl/QWu22 =============== */
+p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, legend, hr {
+    margin: 0 0 $basemargin;
+}
+
+/* { box-sizing: border-box } FTW - http://goo.gl/ggTvz ===================== */
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@include component('text') {
+    @include option('small') {
+        @include font-size(11);
+    }
+}
+
+@include component('no-scroll') {
+    overflow: hidden;
+}
+
+// [aria-hidden="true"]  { display: none; }
+// [aria-hidden="false"] { display: block; }

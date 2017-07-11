@@ -1,0 +1,58 @@
+/* =============================================================================
+   Helper Classes/Mixins
+   ========================================================================== */
+
+.ir {
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+/* Vertical alignment - http://goo.gl/Im9MF5 ================================ */
+%vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Hide from screenreaders and browsers ===================================== */
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+%visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+%invisible {
+    visibility: hidden;
+}
+
+/* Clearfix - Use @extend cf on element ===================================== */
+.cf {
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}

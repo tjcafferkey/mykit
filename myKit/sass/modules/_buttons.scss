@@ -1,0 +1,23 @@
+@include component('btn') {
+    background: $primary;
+    border: 0; // For input buttons
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: ($basemargin / 2) $basemargin;
+    text-align: center;
+    text-decoration: none;
+    @include transition;
+    border-radius:3px;
+    @include font-size(12);
+
+    &:hover {
+        color: #FFF;
+        background: lighten($primary, 5%);
+    }
+
+    @include part('link') {
+        color:#fff;
+    }
+}

@@ -1,0 +1,82 @@
+/* =============================================================================
+    Variables
+    ========================================================================= */
+
+ /* Design assets =========================================================== */
+
+$assetPath: "/assets";
+$imgPath: $assetPath + "/images"; // use background: url("#{$imgPath}/my-bg.jpg");
+
+/* Branding ================================================================= */
+
+$primary        : #14242E;
+$secondary      : #181818;
+$alt1           : #F5F5F5;
+$alt2           : #a365e1;
+
+$selection      : $primary;
+$selectionText  : #FFF;
+
+// enable/disable custom select colour
+$selectColours  : true;
+
+/* Typography =============================================================== */
+
+$basefont           : 'Arial', sans-serif;
+$basefontsize       : 16; //px
+$basefontcolour     : #333;
+$baseline           : 1.25em;
+$basemargin         : 16px;
+
+$light              : 200;
+$regular            : 400;
+$medium             : 500;
+$bold               : 700;
+
+$seriffont          : serif;
+$headerfont         : $basefont;
+
+/* Links ==================================================================== */
+
+$linkcolor          : $secondary;
+$linkcolorhover     : darken($linkcolor, 10);
+$linkcolorvisited   : $linkcolorhover;
+$linkcolorfocus     : darken($linkcolorhover, 10);
+
+$error          : #F29DA8;
+$warning        : #FAE4B8;
+$success        : #9FD392;
+$information    : #6EBDE5;
+
+/* Grid Structure =========================================================== */
+
+$gutter     : 3.125%; // 3.125% of 960px = 30px
+$min-width  : 960px;  // For desktops > 1024px
+$max-width  : 1440px;
+$width      : 85%;
+
+/* Media Queries ============================================================ */
+// Don't necessarily stick to these, consider content-related breakpoints
+
+$small: 519px;
+$tablet: 768px;
+$tabletlandscape: 960px;
+$desktop: 1260px;
+$uber: 2000px;
+
+/* Tables =================================================================== */
+
+$tableHeaderBorder      : 1px solid rgba(0,0,0,.15);
+$tableRowBorder         : 1px solid rgba(0,0,0,.1);
+$tableRowBackground     : rgba(0,0,0,.04);
+$tableRowHover          : rgba(0,0,0,.08);
+
+/* Forms ==================================================================== */
+
+$inputBorder        : #DDD;
+$inputBackground    : #FFF;
+$inputWidth         : 220px;
+$labelWidth         : 180px;
+$inputfocusshadow   : inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+$inputfocusborder   : rgba(82,168,236,.8);
+$inputfocusborderie : #52a8ec;

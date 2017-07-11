@@ -1,0 +1,16 @@
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+
+Example:
+
+.footer-wrap {
+  width: 450px;
+  @include center-block;
+}
+
+*/

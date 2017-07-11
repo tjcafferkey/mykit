@@ -1,0 +1,13 @@
+// Enter your desired font-size in pixels and the mixin will do the rest
+@mixin font-size($pxValue) {
+    font-size: $pxValue+px;
+    font-size: ($pxValue/$basefontsize) + rem;
+}
+
+/* Example
+
+p {
+    @include font-size(16);
+}
+
+*/

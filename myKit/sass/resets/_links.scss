@@ -1,0 +1,10 @@
+a {
+    color: $linkcolor;
+    text-decoration: none;
+    @include transition;
+    cursor:pointer;
+
+    &:hover {
+        color: $linkcolorhover;
+    }
+}

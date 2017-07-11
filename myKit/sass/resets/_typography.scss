@@ -1,0 +1,95 @@
+// fixes horribly rendered webfonts
+    html{
+        -webkit-font-smoothing: antialiased;
+    }
+
+/* 1) Headings ============================================================== */
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $headerfont;
+    // voodoo to enable ligatures and kerning
+    text-rendering: optimizeLegibility;
+    font-weight:$medium;
+}
+
+h1, .h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+}
+
+h2, .h2 {
+	font-size: 1.625em;
+	line-height: 1.15384615em;
+}
+
+h3, .h3 {
+	font-size: 1.375em;
+	line-height: 1.13636364em;
+}
+
+h4, .h4 {
+	font-size: 1.125em;
+	line-height: 1.11111111em;
+}
+
+
+p {
+    font-size: 1em;
+}
+
+.lead {
+    font-size: 1.125em;
+    font-weight: $bold;
+}
+
+@include respond-to(md) {
+
+    h1, .h1 {
+        font-size: 2.5em;
+        line-height: 1.125em;
+    }
+
+    h2, .h2 {
+        font-size: 2em;
+        line-height: 1.25em;
+    }
+
+    h3, .h3 {
+        font-size: 1.5em;
+        line-height: 1.25em;
+    }
+
+    h4, .h4 {
+        line-height: 1.22222222em;
+    }
+
+    p {
+        line-height: 1.375em;
+    }
+}
+
+@include respond-to(lg) {
+
+    h1, .h1 {
+        font-size: 3em;
+        line-height: 1.05em;
+    }
+
+    h2, .h2 {
+        font-size: 2.25em;
+    }
+
+    h3, .h3 {
+        font-size: 1.75em;
+    }
+
+    h4, .h4 {
+
+    }
+
+    p {
+        line-height: 1.375em;
+    }
+
+}

@@ -1,0 +1,12 @@
+@mixin vector-bg-with-fallback($name) {
+	background-image: url('/img/$name.png');
+	background-image: none, url('/img/$name.svg');
+}
+
+/* Example
+
+.logo {
+    @include vector-bg-with-fallback(logo);
+}
+
+*/

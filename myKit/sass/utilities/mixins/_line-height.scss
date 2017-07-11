@@ -1,0 +1,12 @@
+@mixin line-height($pxValue) {
+    line-height: $pxValue+px;
+    line-height: ($pxValue/$basefontsize) + rem;
+}
+
+/* Example
+
+p {
+    @include line-height(24);
+}
+
+*/

@@ -1,0 +1,26 @@
+table {
+    max-width: 100%;
+    width: 100%;
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        border-bottom: $tableHeaderBorder;
+        font-weight: $bold;
+    }
+    td {
+        border-bottom: $tableRowBorder;
+    }
+    thead th {
+        vertical-align: bottom;
+    }
+    thead {
+        @include font-size(14);
+    }
+    tbody {
+        @include font-size(13);
+    }
+}

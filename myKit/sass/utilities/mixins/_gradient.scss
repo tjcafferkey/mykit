@@ -1,0 +1,29 @@
+@function gradient($start-color: #EEE, $end-color: #FFF, $prefix: "") {
+	@return #{$prefix}linear-gradient($start-color, $end-color);
+}
+
+@mixin gradient($color: #F5F5F5, $start-color: #EEE, $end-color: #FFF) {
+    background-color: $color;
+    background-repeat: repeat-x;
+	/* Android 2.1 - 3.0 */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($start-color), to($end-color)); 
+	/* Safari 5.1+, Chrome 10+, iOS Safari, Android 4.0+ */
+    background-image: gradient($start-color, $end-color, -webkit-); 
+	/* Opera 11.10 */
+    background-image: gradient($start-color, $end-color, -o-); 
+	/* the standard */
+    background-image: gradient($start-color, $end-color); 
+}
+
+/* Example
+
+nav {
+    @include gradient(#F5F5F5, #EEE, #FFF);
+}
+
+// multiple backgorun
+.multiple-bg-elem {
+	background: url("/assets/images/my-img.png") no-repeat left center, gradient(#ccc, #999);
+}
+
+*/

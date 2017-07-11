@@ -1,0 +1,38 @@
+/* =============================================================================
+    Calculate fluid ratio for an image based on two dimensions (width/height)
+    - http://goo.gl/Wl694
+    ========================================================================= */
+
+@mixin fluid-ratio($large-size, $small-size) {
+    $width-large: nth($large-size, 1);
+    $width-small: nth($small-size, 1);
+    $height-large: nth($large-size, 2);
+    $height-small: nth($small-size, 2);
+    $slope: ($height-large - $height-small) / ($width-large - $width-small);
+    $height: $height-small - $width-small * $slope;
+
+    height: $height;
+    padding-top: $slope * 100%;
+
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;  /* Internet Explorer 7/8 */
+}
+
+/* Example - The following will have fluid ratio from 4:1 at 800px to 2:1 at 300px.
+
+    HTML:
+    <div class="column">
+        <figure class="fixedratio"></figure>
+    </div>
+
+    CSS:
+    .column {
+        max-width: 800px;
+    }
+    .fixedratio {
+        @include fluid-ratio(800px 200px, 300px 150px);
+        background-image: url(/path/to/file/);
+    }
+
+*/

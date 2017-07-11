@@ -1,0 +1,25 @@
+@mixin respond-to($breakpoint) {
+    @media (min-width: #{$breakpoint}) {
+      @content;
+    }
+}
+
+@mixin respond-below($breakpoint) {
+    @media (max-width: #{$breakpoint}) {
+      @content;
+    }
+}
+
+/*
+
+Example:
+
+.button {
+  @include font-size(12);
+
+  @include respond-to($tabletlandscape) {
+    @include font-size(16);
+  }
+}
+
+*/
