@@ -4,7 +4,6 @@ BEM and Webpack Frontend Framework
 ## Minimum Requirements
 
 * Node v6+
-* Gulp
 
 ## Installation
 
@@ -12,10 +11,10 @@ BEM and Webpack Frontend Framework
 npm install
 ```
 
-## Run gulp
+## Run build
 
 ```bash
-gulp
+npm run build
 ```
 ## HTML setup
 
@@ -26,7 +25,7 @@ Next you just have to make sure you link the files properly in your webpage. Gen
 <html>
 <head>
     <!--Import style.css-->
-    <link rel="stylesheet" type="text/css" href="<your-project-path>/myKit/build/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<your-project-path>/myKit/build/css/main.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -34,7 +33,7 @@ Next you just have to make sure you link the files properly in your webpage. Gen
 
 <body>
     <!--Import script.min.js-->
-    <script type="text/javascript" src="<your-project-path>/myKit/build/js/script.min.js"> </script>
+    <script type="text/javascript" src="<your-project-path>/myKit/build/js/main.min.js"> </script>
 </body>
 </html>
 ```
