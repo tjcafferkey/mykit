@@ -5,14 +5,11 @@ var autoprefixer  = require('autoprefixer');
 
 module.exports = {
   devtool: 'eval',
-    entry: [
-    './myKit/scripts/main.js',
-    './myKit/scss/style.scss'
-    ],
+    entry: ['./myKit/scripts/main.js', './myKit/scss/style.scss'],
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'main.min.js',
-    publicPath: '/build/'
+    path: path.join(__dirname, '/myKit/build'),
+    filename: '[name].js',
+    publicPath: 'myKit/build/'
   },
   watch: true,
   module: {

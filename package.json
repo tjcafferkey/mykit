@@ -1,6 +1,6 @@
 {
   "name": "myKit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "BEM and Webpack Frontend Framework",
   "main": "myKit/scripts/main.js",
   "private": true,

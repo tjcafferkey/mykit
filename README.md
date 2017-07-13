@@ -25,7 +25,7 @@ Next you just have to make sure you link the files properly in your webpage. Gen
 <html>
 <head>
     <!--Import style.css-->
-    <link rel="stylesheet" type="text/css" href="<your-project-path>/myKit/build/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<your-project-path>/myKit/build/main.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -33,7 +33,7 @@ Next you just have to make sure you link the files properly in your webpage. Gen
 
 <body>
     <!--Import script.min.js-->
-    <script type="text/javascript" src="<your-project-path>/myKit/build/js/main.min.js"> </script>
+    <script type="text/javascript" src="<your-project-path>/myKit/build/main.js"> </script>
 </body>
 </html>
 ```
