@@ -38,6 +38,20 @@ Next you just have to make sure you link the files properly in your webpage. Gen
 </html>
 ```
 
+## SCSS setup
+
+When using image paths within the SCSS files, you must ensure you referrence the image as if the relative path starts at the index of the site rather than the compiled css file.
+
+In **myKit/scss/_variables.scss** update the $assetPath variable with the relative path from the root of your site.
+
+When using images in your SCSS be sure to use this variable, for example:
+
+```scss
+@include component('banner') {
+    background-image:url('#{$imgPath}/banner.jpg');
+}
+```
+
 ## Code Examples
 
 In the below HTML you will see mark up for a simple section with the class banner. Banner also has an option class of main which inherits the standard .banner styles allowing you to specify any overrides or additional styles for the "main banner".
