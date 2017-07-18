@@ -35,3 +35,25 @@ p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, leg
 
 // [aria-hidden="true"]  { display: none; }
 // [aria-hidden="false"] { display: block; }
+
+.container {
+    margin: auto;
+    padding: 0 $basemargin;
+}
+
+@include respond-to($tabletlandscape) {
+    .container {
+        margin: auto;
+        max-width: $max-width;
+        min-width: $min-width;
+        width: $width;
+    }
+}
+
+@include respond-to($desktop) {
+    .container {
+        margin: auto;
+        max-width: $max-width;
+        width: $width;
+    }
+}
