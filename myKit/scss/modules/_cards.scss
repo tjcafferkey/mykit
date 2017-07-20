@@ -9,7 +9,7 @@
     @include line-height(16);
 
     @include respond-to($tablet) {
-        margin: 20px;
+        margin: 20px 0;
     }
     
     @include part('inner') {
