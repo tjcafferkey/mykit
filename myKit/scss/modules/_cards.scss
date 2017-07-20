@@ -1,0 +1,62 @@
+@include component('card') {
+	background-color: #ffffff;
+	border-radius: 2px;
+    @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+	position: relative;
+    padding: 0 0 55px 0;
+    margin: 10px 0;
+    @include font-size($basefontsize);
+    @include line-height(16);
+
+    @include respond-to($tablet) {
+        margin: 20px;
+    }
+    
+    @include part('inner') {
+        padding: 15px;
+    }
+
+    @include part('header') {
+        @include font-size(18);
+        margin-bottom: 15px;
+    }
+
+    @include part('footer') {
+        width: 100%;
+        border-top: 1px solid $grey;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    @include part('link') {
+        color: $alt2;
+        padding-bottom: 0px;
+        transition: 0.2s;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: lighten($alt2, 10%);
+        }
+    }
+}
+
+/*
+    HTML Markup
+
+    <div class="card">
+        <div class="card__inner">
+            <div class="card__header">
+                Header link
+            </div>
+            Nam a sem ligula. Quisque pharetra imperdiet urna, quis laoreet mi. Aliquam erat volutpat.
+        </div>
+        <div class="card__footer">
+            <div class="card__inner">
+                <a class="card__link" href="#">Footer link</a>
+            </div>
+        </div>
+    </div>
+
+*/
