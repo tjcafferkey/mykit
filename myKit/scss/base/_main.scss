@@ -23,12 +23,6 @@ p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, leg
     box-sizing: border-box;
 }
 
-@include component('text') {
-    @include option('small') {
-        @include font-size(11);
-    }
-}
-
 @include component('no-scroll') {
     overflow: hidden;
 }
@@ -39,19 +33,15 @@ p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, leg
 .container {
     margin: auto;
     padding: 0 $basemargin;
-}
 
-@include respond-to($tabletlandscape) {
-    .container {
+    @include respond-to($tabletlandscape) {
         margin: auto;
         max-width: $max-width;
         min-width: $min-width;
         width: $width;
     }
-}
 
-@include respond-to($desktop) {
-    .container {
+    @include respond-to($desktop) {
         margin: auto;
         max-width: $max-width;
         width: $width;
